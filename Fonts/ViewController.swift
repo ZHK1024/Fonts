@@ -17,7 +17,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = NSLocalizedString("HomeTitle", comment: "Fonts")
+        title = NSLocalizedString("HOME", comment: "Fonts")
         
         let familtNames = UIFont.familyNames;
         for familyName: String in familtNames {
@@ -47,7 +47,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.deselectRow(at: indexPath, animated: true)
         let effectVC = storyboard?.instantiateViewController(withIdentifier: "FontEffectViewController") as! FontEffectViewController
         effectVC.fontName = names[indexPath.row];
-        navigationItem.leftBarButtonItem?.title = ""
         navigationController?.pushViewController(effectVC, animated: true);
     }
 }

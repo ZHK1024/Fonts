@@ -32,6 +32,8 @@
 		2433995C1F415197005BCD82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2433995E1F415198005BCD82 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2433995F1F415199005BCD82 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		243399611F418635005BCD82 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		243399631F41864F005BCD82 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 			children = (
 				243399361F412E42005BCD82 /* Base */,
 				243399471F414FAD005BCD82 /* zh-Hans */,
+				243399611F418635005BCD82 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			children = (
 				2433993B1F412E42005BCD82 /* Base */,
 				243399481F414FAE005BCD82 /* zh-Hans */,
+				243399631F41864F005BCD82 /* en */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -333,6 +337,7 @@
 				243399421F412E42005BCD82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
