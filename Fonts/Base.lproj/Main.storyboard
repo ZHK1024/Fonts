@@ -70,26 +70,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5DF-sK-F3Z">
-                                <rect key="frame" x="26" y="36" width="322" height="220"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0eR-xo-d12">
+                                <rect key="frame" x="20" y="40" width="335" height="226"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1EF-AJ-jXa">
+                                        <rect key="frame" x="8" y="0.0" width="327" height="218"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" red="0.15435112849999999" green="0.17711046010000001" blue="0.44563802079999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="gVO-fq-O4b" id="CFa-nP-3ZJ"/>
+                                        </connections>
+                                    </textView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="220" id="Hdf-x6-FCe"/>
+                                    <constraint firstAttribute="height" constant="226" id="8uV-Pj-Wny"/>
+                                    <constraint firstAttribute="trailing" secondItem="1EF-AJ-jXa" secondAttribute="trailing" id="Iyb-m2-QHX"/>
+                                    <constraint firstItem="1EF-AJ-jXa" firstAttribute="leading" secondItem="0eR-xo-d12" secondAttribute="leading" constant="8" id="VNZ-cw-ZS9"/>
+                                    <constraint firstItem="1EF-AJ-jXa" firstAttribute="top" secondItem="0eR-xo-d12" secondAttribute="top" id="dPd-Yz-gUs"/>
+                                    <constraint firstAttribute="bottom" secondItem="1EF-AJ-jXa" secondAttribute="bottom" constant="8" id="h9I-Zs-JYA"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="5DF-sK-F3Z" firstAttribute="top" secondItem="gm8-UF-OXY" secondAttribute="bottom" constant="16" id="7cL-wN-BFY"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="5DF-sK-F3Z" secondAttribute="trailing" constant="11" id="d7G-fz-Pag"/>
-                            <constraint firstItem="5DF-sK-F3Z" firstAttribute="leading" secondItem="bdU-0y-vTP" secondAttribute="leadingMargin" constant="10" id="eHR-7E-rEh"/>
+                            <constraint firstItem="0eR-xo-d12" firstAttribute="leading" secondItem="bdU-0y-vTP" secondAttribute="leadingMargin" constant="4" id="0bk-5F-tj1"/>
+                            <constraint firstItem="0eR-xo-d12" firstAttribute="top" secondItem="gm8-UF-OXY" secondAttribute="bottom" constant="20" id="MgV-Tf-KjJ"/>
+                            <constraint firstItem="0eR-xo-d12" firstAttribute="trailing" secondItem="bdU-0y-vTP" secondAttribute="trailingMargin" constant="-4" id="uDp-0K-Gp4"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="textView" destination="5DF-sK-F3Z" id="QoK-ZY-cZF"/>
+                        <outlet property="backView" destination="0eR-xo-d12" id="mrA-ij-swJ"/>
+                        <outlet property="textView" destination="1EF-AJ-jXa" id="Ue4-cr-RUk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LWQ-2j-Udw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -106,7 +120,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.2727322048611111" green="0.28564453125" blue="0.55558268229166663" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.15435112847222221" green="0.17711046006944445" blue="0.44563802083333331" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>

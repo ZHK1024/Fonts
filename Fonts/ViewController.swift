@@ -17,6 +17,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = NSLocalizedString("HomeTitle", comment: "Fonts")
+        
         let familtNames = UIFont.familyNames;
         for familyName: String in familtNames {
             names.append(contentsOf: UIFont.fontNames(forFamilyName: familyName))
@@ -25,7 +27,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // MARK: UITableView dataSource
@@ -36,7 +37,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! FontEffectCell;
-//        cell?.textLabel?.text = names[indexPath.row];
         cell.fontName = names[indexPath.row];
         return cell;
     }

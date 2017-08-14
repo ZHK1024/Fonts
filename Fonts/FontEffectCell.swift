@@ -13,12 +13,13 @@ class FontEffectCell: UITableViewCell {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        textLabel?.textColor = UIColor.init(colorLiteralRed: 39 / 255.0, green: 45 / 255.0, blue: 112 / 255.0, alpha: 1)
 //        fatalError("init(coder:) has not been implemented")
     }
     
     var fontName: String {
-        set(newFontName) {
-            _fontName = newFontName
+        set {
+            _fontName = newValue
             textLabel?.text = _fontName
             textLabel?.font = UIFont.init(name: _fontName, size: 15)
         }

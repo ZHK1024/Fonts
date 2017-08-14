@@ -7,3 +7,5 @@
 */
 
 CFBundleDisplayName = "系统字体";
+
+HomeTitle = "字体";

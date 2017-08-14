@@ -8,11 +8,11 @@
 
 import UIKit
 
-class FontEffectViewController: ViewController {
+class FontEffectViewController: ViewController, UITextViewDelegate {
     
     var fontName: String = ""
     
-
+    @IBOutlet weak var backView: UIView!
     @IBOutlet weak var textView: UITextView!
     
     override func viewDidLoad() {
@@ -23,17 +23,26 @@ class FontEffectViewController: ViewController {
         let font = UIFont.init(name: fontName, size: 15)
         
         textView.font = font
-        
-        textView.layer.borderColor = UIColor.gray.cgColor
-        textView.layer.borderWidth = 0.5
-        textView.layer.cornerRadius = 5.0
 
-//        print(textView.contentOffset)
+        backView.layer.borderColor = UIColor.gray.cgColor
+        backView.layer.borderWidth = 1.0
+        backView.layer.cornerRadius = 5.0
+
         textView.contentInset = UIEdgeInsetsMake(-64, 0, 0, 0)
-//        textView.contentOffset = CGPointFromString("{0, -64}")
+        textView.scrollIndicatorInsets = UIEdgeInsetsMake(-64, 0, 0, 0)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        backView.layer.borderWidth = 1.5
+        backView.layer.borderColor = UIColor.init(colorLiteralRed: 39 / 255.0, green: 45 / 255.0, blue: 112 / 255.0, alpha: 0.7).cgColor
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        backView.layer.borderWidth = 1.0
+        backView.layer.borderColor = UIColor.gray.cgColor
     }
 }
